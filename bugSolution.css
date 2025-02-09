@@ -1,0 +1,23 @@
+To resolve the specificity issue and make the text color purple, you can increase the specificity of the selector `.container div p` by making it more specific. Here's a modified solution:
+
+```css
+div {
+  color: blue;
+}
+
+.container div {
+  color: red;
+}
+
+.container p {
+  color: green;
+}
+
+.container div p {
+  color: purple !important; /* Using !important forces the style override */
+}
+```
+
+Alternatively, changing the structure of your HTML or adding an extra class would provide better solutions which should be preferred over using `!important`.
+
+The `!important` rule should be used sparingly, as overuse can make CSS hard to maintain and debug.  However, it serves as a quick solution for this specific demonstration.
